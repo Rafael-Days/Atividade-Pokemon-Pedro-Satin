@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // console.log(queryString())
     asyncFoo()
 })
 
@@ -19,6 +18,7 @@ async function asyncFoo() {
     // header
     const a_Header = document.createElement('a')
     const h1_Header = document.createElement('h1')
+    header.setAttribute('id', 'header');
 
     h1_Header.textContent = 'Squirtle'
     a_Header.appendChild(h1_Header)
@@ -27,7 +27,45 @@ async function asyncFoo() {
     // nav
     const ul_nav = document.createElement('ul')
     const li_n1 = document.createElement('li')
+    const li_n2 = document.createElement('li')
+    const li_n3 = document.createElement('li')
+    const li_n4 = document.createElement('li')
+    const li_n5 = document.createElement('li')
+    const li_n6 = document.createElement('li')
+
     const a_n1 = document.createElement('a')
+    const a_n2 = document.createElement('a')
+    const a_n3 = document.createElement('a')
+    const a_n4 = document.createElement('a')
+    const a_n5 = document.createElement('a')
+    const a_n6 = document.createElement('a')
+
+    a_n1.textContent = 'Informações sobre Squirtle'
+    a_n2.textContent = 'Características'
+    a_n3.textContent = 'Curiosidades'
+    a_n4.textContent = 'Artigo sobre Squirtle'
+    a_n5.textContent = 'Recursos Adicionais'
+    a_n6.textContent = 'Evolução'
+
+    a_n1.setAttribute('href', '#info-squirtle');
+    a_n2.setAttribute('href', '#caracteristicas');
+    a_n3.setAttribute('href', '#curiosidades');
+    a_n4.setAttribute('href', '#artigo-squirtle');
+    a_n5.setAttribute('href', '#recursos');
+    a_n6.setAttribute('href', '#evolucao');
+
+    li_n1.appendChild(a_n1)
+    li_n2.appendChild(a_n2)
+    li_n3.appendChild(a_n3)
+    li_n4.appendChild(a_n4)
+    li_n5.appendChild(a_n5)
+    li_n6.appendChild(a_n6)
+    ul_nav.appendChild(li_n1)
+    ul_nav.appendChild(li_n2)
+    ul_nav.appendChild(li_n3)
+    ul_nav.appendChild(li_n4)
+    ul_nav.appendChild(li_n5)
+    ul_nav.appendChild(li_n6)
 
     nav.appendChild(ul_nav)
 
@@ -53,6 +91,7 @@ async function asyncFoo() {
 
     // segunda section
     const section2 = document.createElement('section')
+    section2.setAttribute('id', 'caracteristicas');
     const h2_2 = document.createElement('h2')
     const p2 = document.createElement('p')
 
@@ -84,6 +123,7 @@ async function asyncFoo() {
 
     // primeiro article
     const article1 = document.createElement('article')
+    article1.setAttribute('id', 'artigo-squirtle');
     const h2_4 = document.createElement('h2')
     const p4_1 = document.createElement('p')
     const p4_2 = document.createElement('p')
@@ -101,6 +141,7 @@ async function asyncFoo() {
 
     // quarta section
     const section4 = document.createElement('section')
+    section4.setAttribute('id', 'recursos');
     const h2_a1 = document.createElement('h2')
     const ul4 = document.createElement('ul')
     const aa1_1 = document.createElement('a')
@@ -179,6 +220,32 @@ async function asyncFoo() {
     fig5_3.appendChild(fc5_3)
 
     main.appendChild(section5)
+
+    //footer
+    const p_f1 = document.createElement('p')
+    const p_f2 = document.createElement('p')
+    const a_f2 = document.createElement('a')
+    const p_f3 = document.createElement('p')
+    const a_f3 = document.createElement('a')
+    const p_f4 = document.createElement('p')
+    const a_f4 = document.createElement('a')
+
+    p_f1.textContent = '\u00A9 2024 Página do Pokémon Squirtle. Todos os direitos reservados.' //não foi possivel usar: &copy;, usei então \u00A9
+    p_f1.setAttribute('aria-label', 'Copyright');
+    a_f2.textContent = 'Voltar para o topo';
+    a_f3.textContent = 'Contato via e-mail';
+    a_f4.textContent = 'Telefone: (55) 5555-5555';
+    a_f2.setAttribute('href', '#header');
+    a_f3.setAttribute('href', 'mailto:contato@squirtlepage.com');
+    a_f4.setAttribute('href', 'tel:+5555555555');
+
+    p_f2.appendChild(a_f2)
+    p_f3.appendChild(a_f3)
+    p_f4.appendChild(a_f4)
+    footer.appendChild(p_f1)
+    footer.appendChild(p_f2)
+    footer.appendChild(p_f3)
+    footer.appendChild(p_f4)
 }
 
 
