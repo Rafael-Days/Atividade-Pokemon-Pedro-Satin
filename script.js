@@ -6,8 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function asyncFoo() {
     const main = document.querySelector("main")
+    const head = document.querySelector("head")
+    const header = document.querySelector("header")
+    const nav = document.querySelector("nav")
+    const footer = document.querySelector("footer")
     
+    // titulo
+    const titile = document.createElement('title')
+    titile.textContent = 'Página do Pokémon Squirtle'
+    head.appendChild(titile)
+
+    // header
+    const a_Header = document.createElement('a')
+    const h1_Header = document.createElement('h1')
+
+    h1_Header.textContent = 'Squirtle'
+    a_Header.appendChild(h1_Header)
+    header.appendChild(a_Header)
+
     // nav
+    const ul_nav = document.createElement('ul')
+    const li_n1 = document.createElement('li')
+    const a_n1 = document.createElement('a')
+
+    nav.appendChild(ul_nav)
 
     // primeira section
     const section1 = document.createElement('section')
@@ -42,6 +64,7 @@ async function asyncFoo() {
 
     // terceira section
     const section3 = document.createElement('section')
+    section3.setAttribute('id', 'curiosidades');
     const h2_3 = document.createElement('h2')
     const ul3 = document.createElement('ul')
     const li3_1 = document.createElement('li')
